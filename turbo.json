@@ -1,34 +1,25 @@
 {
   "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": ["**/.env"],
+  "globalEnv": ["NODE_ENV", "API_URL"],
   "tasks": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "dist/**"
-      ]
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
     },
-    "test": {
-      "dependsOn": [
-        "build"
-      ],
+    "type-check": {
       "outputs": []
     },
     "lint": {
       "outputs": []
     },
+    "test": {
+      "dependsOn": ["build"],
+      "outputs": []
+    },
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     }
-  },
-  "pipeline": {
-    "build": {
-      "cache": true,
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
-    }
-  },
-  "globalDependencies": ["package.json", "tsconfig.json"],
-  "globalEnv": ["NODE_ENV", "API_URL"]
+  }
 }
