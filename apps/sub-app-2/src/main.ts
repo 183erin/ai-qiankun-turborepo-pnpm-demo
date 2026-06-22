@@ -6,9 +6,9 @@ import {
     qiankunWindow
 } from 'vite-plugin-qiankun/dist/helper'
 
-let app
+let app: any
 
-const render = (container) => {
+const render = (container?: HTMLElement) => {
     app = createApp(App)
     app
         .use(router)
@@ -22,6 +22,7 @@ const initQianKun = () => {
             render(container)
         },
         bootstrap() {},
+        update() {},
         unmount() {
             app.unmount()
         }

@@ -1,2 +1,5 @@
-# 提交前对暂存文件执行 ESLint 校验（仅检查本次改动的文件）
+# 1) 对暂存文件执行 ESLint 校验（仅检查本次改动的文件）
 pnpm exec lint-staged
+
+# 2) 全量 TypeScript 类型检查（类型检查需跨文件上下文，无法只查单文件）
+pnpm run type-check

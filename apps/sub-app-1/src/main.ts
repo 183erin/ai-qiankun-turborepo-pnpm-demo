@@ -8,7 +8,7 @@ import {
 
 let app:any
 
-const render = (container) => {
+const render = (container?: HTMLElement) => {
     console.log('app mount render')
     app = createApp(App)
     app
@@ -25,6 +25,7 @@ const initQianKun = () => {
             render(container)
         },
         bootstrap() {},
+        update() {},
         unmount() {
             app.unmount()
         }
