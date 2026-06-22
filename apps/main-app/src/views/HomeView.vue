@@ -1,8 +1,12 @@
 <template>
   <div>
     <h1>Home Page</h1>
-    <button @click="goToSubApp1">Go to Sub App 1</button>
-    <button @click="goToSubApp2">Go to Sub App 2</button>
+    <button @click="goToSubApp1">
+      Go to Sub App 1
+    </button>
+    <button @click="goToSubApp2">
+      Go to Sub App 2
+    </button>
   </div>
 </template>
 

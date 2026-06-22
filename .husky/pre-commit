@@ -1,2 +1,2 @@
-# 提交前钩子：可在此添加 lint / 测试等校验命令
-# 例如: pnpm run lint
+# 提交前对暂存文件执行 ESLint 校验（仅检查本次改动的文件）
+pnpm exec lint-staged
